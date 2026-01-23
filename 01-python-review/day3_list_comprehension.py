@@ -17,6 +17,8 @@ with open('01-python-review/data/pessoas.txt', 'r') as pessoas:
     print(lista_atualizada)
 '''
 
+#* Uso de LIST COMPREHENSION
+'''
 with open('01-python-review/data/pessoas.txt', 'r') as pessoas:
     lista_pessoas = []
     for pessoa in pessoas:
@@ -32,3 +34,22 @@ with open('01-python-review/data/pessoas.txt', 'r') as pessoas:
     ]
 
     print(lista_atualizada)
+'''
+#* Exercício final DIA 3 (LIST COMPREHENSION)
+
+pessoas = [
+    ['Ana', 17],
+    ['Bruno', 22],
+    ['Carlos', 18],
+    ['Diana', 16]
+]
+
+pessoas_atualizadas = [
+    {'nome': pessoa[0], 'idade': pessoa[1]}
+    for pessoa in pessoas if pessoa[1] >= 18
+]
+
+print(pessoas_atualizadas)
+
+
+
